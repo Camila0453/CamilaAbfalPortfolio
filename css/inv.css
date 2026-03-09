@@ -1,0 +1,364 @@
+ *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      min-height:100vh;
+      overflow:hidden;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background: linear-gradient( #ECE7D1, #DBCEA5, #ffe3f1);
+      position:relative;
+    }
+
+    .contenedor{
+      position:relative;
+      z-index:2;
+      text-align:center;
+      background: rgba(255,255,255,0.25);
+      border: 1px solid rgba(255,255,255,0.35);
+      backdrop-filter: blur(8px);
+      padding:50px 35px;
+      border-radius:25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      max-width:700px;
+      width:90%;
+      animation: aparecer 1.8s ease;
+    }
+
+    .texto1{
+      font-size: 2.1rem;
+      font-weight:300;
+      color:#8A7650;
+      margin-bottom:10px;
+      animation: flotar 3s ease-in-out infinite;
+    }
+
+    .texto2{
+      font-size: 3.4rem;
+      font-weight:700;
+      color:#8A7650;
+      margin-bottom:15px;
+      text-shadow: 0 0 10px rgba(255,255,255,0.6);
+      animation: latido 2s infinite;
+    }
+
+    .texto3{
+      font-size:1.1rem;
+      color:#8A7650;
+      margin-top:10px;
+    }
+
+    .nombre{
+      margin-top:18px;
+      font-size:1.35rem;
+      font-weight:600;
+      color:#8A7650;
+    }
+
+    .corazon{
+      position:absolute;
+      bottom:-50px;
+      font-size:24px;
+      animation: subir linear infinite;
+      opacity:0.8;
+      z-index:1;
+    }
+
+    .confetti{
+      position:absolute;
+      top:-20px;
+      width:12px;
+      height:12px;
+      opacity:0.9;
+      animation: caer linear infinite;
+      z-index:1;
+      border-radius:2px;
+    }
+
+    @keyframes aparecer{
+      from{
+        opacity:0;
+        transform: translateY(25px) scale(0.97);
+      }
+      to{
+        opacity:1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes latido{
+      0%{ transform: scale(1); }
+      50%{ transform: scale(1.06); }
+      100%{ transform: scale(1); }
+    }
+
+    @keyframes flotar{
+      0%{ transform: translateY(0); }
+      50%{ transform: translateY(-8px); }
+      100%{ transform: translateY(0); }
+    }
+
+    @keyframes subir{
+      0%{
+        transform: translateY(0) scale(1);
+        opacity:0;
+      }
+      10%{
+        opacity:0.85;
+      }
+      100%{
+        transform: translateY(-110vh) scale(1.3);
+        opacity:0;
+      }
+    }
+
+    @keyframes caer{
+      0%{
+        transform: translateY(0) rotate(0deg);
+      }
+      100%{
+        transform: translateY(110vh) rotate(720deg);
+      }
+    }
+
+    @media (max-width: 768px){
+      .texto1{
+        font-size:1.6rem;
+      }
+
+      .texto2{
+        font-size:2.0rem;
+      }
+
+      .texto3{
+        font-size:1rem;
+      }
+
+      .nombre{
+        font-size:1.1rem;
+      }
+
+      .contenedor{
+        padding:40px 25px;
+      }
+    }
+    /* DINO */
+.dino-box{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  z-index: 20;
+  animation: aparecer 1.5s ease;
+}
+
+.dino{
+  font-size: 90px;
+  animation: flotar 2.5s ease-in-out infinite;
+}
+
+.dialogo{
+  background: rgba(255,255,255,0.95);
+  padding: 18px;
+  border-radius: 18px;
+  max-width: 280px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+.dialogo::after{
+  content: "";
+  position: absolute;
+  right: -12px;
+  bottom: 20px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 14px solid rgba(255,255,255,0.95);
+}
+
+.dialogo p{
+  font-size: 0.95rem;
+  color: #7a2f56;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.botones{
+  display:flex;
+  gap:10px;
+}
+
+.btn{
+  text-decoration:none;
+  border:none;
+  padding:10px 16px;
+  border-radius:12px;
+  font-family:'Poppins', sans-serif;
+  font-size:0.9rem;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.si{
+  background:#d63384;
+  color:white;
+}
+
+.si:hover{
+  background:#b8256d;
+  transform:scale(1.05);
+}
+
+.no{
+  background:#f3d6e6;
+  color:#7a2f56;
+}
+
+.no:hover{
+  background:#ebc3da;
+  transform:scale(1.05);
+}
+
+.corazon{
+  position:absolute;
+  bottom:-50px;
+  font-size:24px;
+  animation: subir linear infinite;
+  opacity:0.8;
+  z-index:1;
+}
+.botones{
+  margin-top:30px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+}
+
+.boton{
+  text-decoration:none;
+  background: linear-gradient(135deg,#DBCEA5,#ffe3f1);
+  color:white;
+  padding:14px 22px;
+  border-radius:20px;
+  font-weight:500;
+  box-shadow:0 6px 15px rgba(0,0,0,0.15);
+  transition:0.3s;
+}
+
+.boton:hover{
+  transform:translateY(-3px) scale(1.05);
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.confetti{
+  position:absolute;
+  top:-20px;
+  width:12px;
+  height:12px;
+  opacity:0.9;
+  animation: caer linear infinite;
+  z-index:1;
+  border-radius:2px;
+}
+
+@keyframes aparecer{
+  from{
+    opacity:0;
+    transform: translateY(25px) scale(0.97);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes latido{
+  0%{ transform: scale(1); }
+  50%{ transform: scale(1.06); }
+  100%{ transform: scale(1); }
+}
+
+@keyframes flotar{
+  0%{ transform: translateY(0); }
+  50%{ transform: translateY(-8px); }
+  100%{ transform: translateY(0); }
+}
+
+@keyframes subir{
+  0%{
+    transform: translateY(0) scale(1);
+    opacity:0;
+  }
+  10%{
+    opacity:0.85;
+  }
+  100%{
+    transform: translateY(-110vh) scale(1.3);
+    opacity:0;
+  }
+}
+
+@keyframes caer{
+  0%{
+    transform: translateY(0) rotate(0deg);
+  }
+  100%{
+    transform: translateY(110vh) rotate(720deg);
+  }
+}
+
+@media (max-width: 768px){
+  .texto1{
+    font-size:1.6rem;
+  }
+
+  .texto2{
+    font-size:2.5rem;
+  }
+
+  .texto3{
+    font-size:1rem;
+  }
+
+  .nombre{
+    font-size:1.1rem;
+  }
+
+  .contenedor{
+    padding:40px 25px;
+  }
+
+  .dino-box{
+    right: 10px;
+    bottom: 10px;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+
+  .dino{
+    font-size:70px;
+  }
+
+  .dialogo{
+    max-width:220px;
+  }
+
+  .dialogo::after{
+    right: 25px;
+    bottom: -12px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 14px solid rgba(255,255,255,0.95);
+    border-bottom: 0;
+  }
+}
