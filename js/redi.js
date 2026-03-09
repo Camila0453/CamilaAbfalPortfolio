@@ -1,3 +1,3 @@
 setTimeout(() => {
-  window.location.href = "index1.html";
+  window.location.href = "flora.html";
 }, 6000);
