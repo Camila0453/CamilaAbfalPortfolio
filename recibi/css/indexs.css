@@ -1,0 +1,238 @@
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* BODY */
+
+body{
+
+background-image:url("../img/prog.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+color:#222;
+
+}
+
+/* TITULOS */
+
+h1{
+
+font-size:70px;
+font-weight:700;
+
+}
+
+h2,h3{
+
+font-weight:600;
+
+}
+
+/* PANEL DERECHO */
+
+.div-nombre{
+
+background-color:rgba(40,40,40,0.85);
+color:white;
+
+}
+
+/* ANIMACION FLOTAR */
+
+@keyframes flotar{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-6px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+.flotar{
+
+animation:flotar 3s infinite ease-in-out;
+
+}
+
+
+/* PANEL IZQUIERDO */
+
+.left-panel{
+
+background:linear-gradient(135deg,#7c3aed,#ec4899);
+color:white;
+text-align:center;
+padding:40px;
+position:relative;
+overflow:hidden;
+
+}
+
+.left-panel::before{
+
+content:"";
+position:absolute;
+width:250px;
+height:250px;
+background:rgba(255,255,255,0.12);
+border-radius:50%;
+top:-60px;
+left:-60px;
+
+}
+
+.left-panel::after{
+
+content:"";
+position:absolute;
+width:200px;
+height:200px;
+background:rgba(255,255,255,0.08);
+border-radius:50%;
+bottom:-50px;
+right:-50px;
+
+}
+
+.left-panel p{
+
+font-size:1.2rem;
+margin-top:10px;
+
+}
+
+
+/* PANEL DERECHO */
+
+.right-panel{
+
+background:rgba(255,255,255,0.75);
+backdrop-filter:blur(12px);
+padding:60px 45px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+
+}
+
+.right-panel h2,
+.right-panel h3{
+
+font-weight:700;
+color:#7c3aed;
+margin-bottom:15px;
+
+}
+
+.right-panel p{
+
+font-size:1rem;
+line-height:1.7;
+color:#444;
+
+}
+
+
+/* TARJETAS PROYECTOS */
+
+.project-card{
+
+background:white;
+border-radius:18px;
+padding:20px;
+margin-top:15px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+transition:transform .3s ease,box-shadow .3s ease;
+
+}
+
+.project-card:hover{
+
+transform:translateY(-6px);
+box-shadow:0 14px 30px rgba(0,0,0,0.12);
+
+}
+
+.project-card h5{
+
+color:#ec4899;
+font-weight:600;
+margin-bottom:8px;
+
+}
+
+
+/* BOTON */
+
+.btn-custom{
+
+background:linear-gradient(135deg,#7c3aed,#ec4899);
+color:white;
+border:none;
+border-radius:30px;
+padding:12px 24px;
+margin-top:20px;
+font-weight:600;
+transition:.3s;
+
+}
+
+.btn-custom:hover{
+
+transform:scale(1.05);
+color:white;
+
+}
+
+
+/* ICONOS */
+
+.social-icons a{
+
+color:#7c3aed;
+font-size:1.4rem;
+margin-right:15px;
+transition:.3s;
+
+}
+
+.social-icons a:hover{
+
+color:#ec4899;
+
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+.left-panel,
+.right-panel{
+
+min-height:50vh;
+padding:35px 25px;
+
+}
+
+h1{
+
+font-size:40px;
+
+}
+
+}
