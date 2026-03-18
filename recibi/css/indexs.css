@@ -73,7 +73,7 @@ padding:60px 45px;
 display:flex;
 flex-direction:column;
 justify-content:center;
-border-left:1px solid rgba(255,255,255,0.15);
+border-left:1px solid rgba(0,0,0,0.65);
 
 }
 
@@ -118,7 +118,7 @@ box-shadow:0 14px 30px rgba(0,0,0,0.4);
 
 .project-card h5{
 
-color:#285A48;
+color:#B0E4CC;
 font-weight:600;
 margin-bottom:8px;
 
@@ -162,7 +162,7 @@ transition:.3s;
 
 .social-icons a:hover{
 
-color:#285A48;
+color: #B0E4CC;
 
 }
 
